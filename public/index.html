@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Opportunity Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💼 Job Opportunity Explorer</h1>
+
+        <p class="subtitle">
+            Find jobs based on your skills
+        </p>
+
+        <div class="search-box">
+
+            <label for="candidate">
+                Select Candidate
+            </label>
+
+            <select id="candidate">
+
+                <option value="Kavya">Kavya</option>
+                <option value="Hemanth">Hemanth</option>
+                <option value="Jeswitha">Jeswitha</option>
+                <option value="Naveen">Naveen</option>
+                <option value="Rohitha">Rohitha</option>
+
+            </select>
+
+            <button onclick="getRecommendations()">
+                Find Jobs
+            </button>
+
+        </div>
+
+        <div id="loading"></div>
+
+        <div id="results"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
