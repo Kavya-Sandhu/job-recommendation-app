@@ -8,11 +8,15 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("."));
 
+const neo4j = require("neo4j-driver");
+require("dotenv").config();
+
+// CognoDB connection
 const driver = neo4j.driver(
-    "bolt+s://db-27aad0a5.databases.cognodb.com",
+    process.env.COGNODB_URI,
     neo4j.auth.basic(
-        "cognodb",
-        "bef4926f49c591aeed776bcc63309e60"
+        process.env.COGNODB_USERNAME,
+        process.env.COGNODB_PASSWORD
     )
 );
 
