@@ -2,8 +2,11 @@ const neo4j = require("neo4j-driver");
 
 // CognoDB connection
 const driver = neo4j.driver(
-    "bolt+s://db-27aad0a5.databases.cognodb.com",
-    neo4j.auth.basic("cognodb", "bef4926f49c591aeed776bcc63309e60")
+    process.env.COGNODB_URI,
+    neo4j.auth.basic(
+        process.env.COGNODB_USERNAME,
+        process.env.COGNODB_PASSWORD
+    )
 );
 
 // Seed database
