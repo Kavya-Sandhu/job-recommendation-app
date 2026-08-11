@@ -174,7 +174,7 @@ npm install
 
 ```
 
-# ⚙️ Installation and Setup
+# ⚙️ `Installation and Setup`
 
 Follow these steps to run the Job Recommendation App on your local computer.
 
