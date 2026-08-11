@@ -77,6 +77,7 @@ Job
 
 📂 Project Structure
 
+```text
 job-recommendation-app/
 │
 ├── public/
@@ -98,7 +99,7 @@ job-recommendation-app/
 ├── .gitignore
 |
 └── README.md
-
+```
 public/index.html
 
 Contains the structure of the Job Recommendation application's user interface.
