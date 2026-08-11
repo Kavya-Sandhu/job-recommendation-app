@@ -73,6 +73,7 @@ Job
    ├── REQUIRES_SKILL ──> Skill
    │
    └── POSTED_BY ──> Company
+```
 
 📂 Project Structure
 job-recommendation-app/
