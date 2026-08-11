@@ -75,7 +75,7 @@ Job
    └── POSTED_BY ──> Company
 ```
 
-📂 Project Structure
+###📂 Project Structure
 
 ```text
 job-recommendation-app/
