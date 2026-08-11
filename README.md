@@ -1,83 +1,141 @@
-# 💼 Job Opportunity Explorer
+# 💼 Job Recommendation App
 
-A graph-based Job Recommendation System that recommends suitable job opportunities to candidates based on their skills.
+A full-stack web application that recommends suitable job opportunities based on candidate information and skills.
 
-## 📌 Project Overview
+The application provides a simple and user-friendly interface where users can select a candidate and retrieve relevant job recommendations.
 
-Job Opportunity Explorer is a web application that uses a graph database to connect candidates, skills, jobs, and companies.
+The project uses HTML, CSS, and JavaScript for the frontend, Node.js and Express.js for the backend, and Neo4j as the graph database.
 
-The system analyzes the skills possessed by a candidate and compares them with the skills required by available jobs.
+---
 
-Based on the matching skills, the application recommends suitable jobs and displays a match percentage.
+# 📌 About the Project
 
-## 🎯 Problem Statement
+Finding suitable job opportunities can be challenging because candidates often need to search through many job listings manually.
 
-Job seekers often need to search through many job opportunities to find positions that match their skills.
+The **Job Recommendation App** is developed to simplify this process by connecting candidate information, skills, and job requirements.
 
-This project solves the problem by using a graph-based recommendation approach.
+The application allows a user to select a candidate and retrieve suitable job recommendations through a backend API. The backend communicates with a Neo4j database to retrieve and process the required information.
 
-The system:
+This project demonstrates frontend development, backend development, REST API integration, database connectivity, and GitHub project management.
 
-- Stores candidates and their skills
-- Stores jobs and required skills
-- Stores companies offering jobs
-- Finds matching skills
-- Calculates a match percentage
-- Recommends suitable jobs to candidates
+---
 
-## ✨ Features
+# 🎯 Project Objectives
 
-- Candidate selection
-- Skill-based job recommendations
-- Graph database integration
-- Company and job information
-- Required skill comparison
-- Matched skill identification
-- Match percentage calculation
-- REST API backend
-- Simple and responsive frontend
+The main objectives of this project are:
 
-## 🛠️ Technologies Used
+- To develop a web-based job recommendation application.
+- To recommend suitable jobs based on candidate information and skills.
+- To create an interactive and user-friendly frontend.
+- To develop REST API endpoints using Node.js and Express.js.
+- To connect the backend with a Neo4j graph database.
+- To retrieve job recommendation data from the database.
+- To establish communication between frontend and backend.
+- To practice full-stack web development.
+- To securely manage database credentials using environment variables.
 
-- HTML
-- CSS
+---
+
+# ✨ Features
+
+## 👤 Candidate Selection
+
+Users can select a candidate from the available candidate list.
+
+## 💼 Job Recommendations
+
+The application retrieves suitable job opportunities for the selected candidate.
+
+## 🔍 REST API
+
+The backend provides REST API endpoints for retrieving job recommendation data.
+
+## 🗄️ Neo4j Database
+
+Neo4j is used to store and manage relationships between candidates, skills, jobs, and companies.
+
+## 🌐 Interactive Web Interface
+
+The frontend provides a simple interface for selecting a candidate and finding recommended jobs.
+
+## 📱 Responsive Design
+
+The application can be accessed through desktop and mobile browsers when the devices are connected to the same network during development.
+
+## 🔐 Environment Variable Support
+
+Sensitive database information is stored using environment variables instead of directly writing credentials inside the source code.
+
+---
+
+# 🛠️ Technologies Used
+
+## Frontend
+
+- HTML5
+- CSS3
 - JavaScript
+
+## Backend
+
 - Node.js
 - Express.js
-- CognoDB
-- Cypher Query Language
+
+## Database
+
+- Neo4j
+
+## Development Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+- npm
+- Web Browser
+- Postman
+
+## Other Technologies
+
 - REST API
+- CORS
+- dotenv
+- JSON
 
-## 🧩 Graph Database Structure
+---
 
-The project uses a graph-based data model.
-
-### Main entities
-
-- Person
-- Skill
-- Job
-- Company
-
-### Relationships
+# 🏗️ System Architecture
 
 ```text
-Person
-   │
-   ├── HAS_SKILL ──> Skill
-   │
-   └── APPLIED_FOR ──> Job
-
-Job
-   │
-   ├── REQUIRES_SKILL ──> Skill
-   │
-   └── POSTED_BY ──> Company
-```
-
-# 📂 Project Structure
-
-```text
+                         USER
+                          |
+                          ↓
+                 ┌─────────────────┐
+                 │    Frontend     │
+                 │   HTML/CSS/JS   │
+                 └────────┬────────┘
+                          |
+                          | HTTP Request
+                          ↓
+                 ┌─────────────────┐
+                 │ Node.js +       │
+                 │ Express.js      │
+                 │    Backend      │
+                 └────────┬────────┘
+                          |
+                          | Database Query
+                          ↓
+                 ┌─────────────────┐
+                 │      Neo4j      │
+                 │    Database     │
+                 └────────┬────────┘
+                          |
+                          | Job Data
+                          ↓
+                 ┌─────────────────┐
+                 │ Job Recommended │
+                 │     Results     │
+                 └─────────────────┘
+📂 Project Structure
 job-recommendation-app/
 │
 ├── public/
@@ -91,138 +149,101 @@ job-recommendation-app/
 ├── .env.example
 ├── .gitignore
 └── README.md
-
-```
-
-# 📄 Project Files
-
-## `public/index.html`
-
+📄 Project Files
+public/index.html
 Contains the structure of the Job Recommendation application's user interface.
-
 It includes:
-
-- Application title
-- Candidate selection
-- Find Jobs button
-- Job recommendation display area
-
----
-
-## `public/style.css`
-
+Application title
+Candidate selection
+Find Jobs button
+Job recommendation display area
+public/style.css
 Contains the styling and layout of the web application.
-
 It is responsible for:
-
-- Page layout
-- Colors
-- Fonts
-- Buttons
-- Forms
-- Job recommendation cards
-- Responsive design
-
----
-
-## `public/script.js`
-
+Page layout
+Colors
+Fonts
+Buttons
+Forms
+Job recommendation cards
+Responsive design
+public/script.js
 Contains the frontend JavaScript functionality.
-
 It is responsible for:
-
-- Handling user interactions
-- Reading the selected candidate
-- Sending requests to the backend
-- Receiving API responses
-- Displaying recommended jobs on the webpage
-
----
-
-## `server.js`
-
+Handling user interactions
+Reading the selected candidate
+Sending requests to the backend
+Receiving API responses
+Displaying recommended jobs
+server.js
 Contains the backend implementation using Node.js and Express.js.
-
 It is responsible for:
-
-- Starting the web server
-- Serving frontend files
-- Creating REST API endpoints
-- Connecting to Neo4j
-- Processing requests
-- Sending responses to the frontend
-- Managing environment variables
-
----
-
-## `package.json`
-
+Starting the web server
+Serving frontend files
+Creating REST API endpoints
+Connecting to Neo4j
+Processing requests
+Sending responses to the frontend
+Managing environment variables
+package.json
 Contains the project information, scripts, and required dependencies used by the application.
-
-The dependencies may include:
-
-- Express.js
-- Neo4j driver
-- dotenv
-- CORS
-  
----
-
-Install all dependencies using:
-
+The project uses packages such as:
+Express.js
+Neo4j Driver
+dotenv
+CORS
+Install the dependencies using:
 npm install
-
-```
-
-# ⚙️ `Installation and Setup`
-
+package-lock.json
+Contains the exact versions of installed npm packages and their dependencies.
+This file helps maintain consistent package versions when installing the project on another computer.
+.env.example
+Contains the names of the environment variables required by the application without exposing actual credentials.
+Example:
+NEO4J_URI=
+NEO4J_USERNAME=
+NEO4J_PASSWORD=
+Never upload your actual .env file or database password to GitHub.
+.gitignore
+Prevents sensitive and unnecessary files from being uploaded to GitHub.
+Example:
+node_modules/
+.env
+README.md
+Contains the complete documentation of the Job Recommendation App.
+⚙️ Installation and Setup
 Follow these steps to run the Job Recommendation App on your local computer.
-
-## 1. Clone the Repository
-
+1. Clone the Repository
 Clone the GitHub repository using:
-
-```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
-
-# 📦 Install Dependencies
-
-Install all the required Node.js packages using:
-
-```bash
+Move into the project directory:
+cd job-recommendation-app
+📦 Install Dependencies
+Install all required Node.js packages using:
 npm install
-
-# 🔐 Configure Environment Variables
-
-Create a `.env` file in the root directory of the project.
-
+This command installs all dependencies required by the project.
+🔐 Configure Environment Variables
+Create a .env file in the root directory of the project.
 Add your Neo4j database details:
-
-```env
 NEO4J_URI=your_neo4j_uri
 NEO4J_USERNAME=your_neo4j_username
 NEO4J_PASSWORD=your_neo4j_password
-
-# 🗄️ Neo4j Database
-
-This project uses **Neo4j** as a graph database to store and manage relationships between candidates, skills, jobs, and companies.
-
-Neo4j is suitable for this project because job recommendations depend on relationships between a candidate's skills and the skills required for different jobs.
-
-## 📊 Database Entities
-
-The main entities used in the application are:
-
-- 👤 Candidate
-- 🛠️ Skill
-- 💼 Job
-- 🏢 Company
-
-## 🔗 Database Relationships
-
-The relationships between the entities can be represented as:
-
-```text
+Replace the values with your actual Neo4j database credentials.
+⚠️ Never upload your actual .env file or Neo4j password to GitHub.
+Use .env.example as a reference:
+NEO4J_URI=
+NEO4J_USERNAME=
+NEO4J_PASSWORD=
+🗄️ Neo4j Database
+This project uses Neo4j as a graph database to store and manage relationships between candidates, skills, jobs, and companies.
+Neo4j is useful for this project because job recommendations depend on relationships between a candidate's skills and the skills required for different jobs.
+📊 Database Entities
+The main entities are:
+👤 Candidate
+🛠️ Skill
+💼 Job
+🏢 Company
+🔗 Database Relationships
 Candidate
     │
     │ HAS_SKILL
@@ -236,208 +257,305 @@ Candidate
     │ OFFERED_BY
     ↓
  Company
-
-# ▶️ Running the Application
-
-Follow the steps below to run the Job Recommendation App on your local computer.
-
-## 1. Start the Backend Server
-
-Open the project folder in **Visual Studio Code**.
-
-Open the terminal and run:
-
-```bash
-
-node server.js
-You should see:
-
-Job Recommendation App running at http://localhost:3000
-
-Then open your browser:
-
-http://localhost:3000/public/index.html
-
-The Job Recommendation App should now be displayed.
-
-🔌 API Endpoints
-
-Test API
-
-GET /api/test
-
-Example:
-
-http://localhost:3000/api/test
-
-This endpoint can be used to verify that the backend server is working.
-
-Job Recommendations API
-
-GET /api/recommendations
-
-Example:
-
-http://localhost:3000/api/recommendations
-
-This endpoint retrieves job recommendation data from the backend/database.
-
-🗄️ Database
-
-This project uses Neo4j as the database.
-
-Neo4j is a graph database that is useful for representing relationships between:
-
-```text
-Candidate
-   │
-   ├── HAS_SKILL ──► Skill
-   │
-   └── MATCHES ────► Job
-                         │
-                         ├── Requires ──► Skill
-                         │
-                         └── Belongs ───► Company
-The graph structure makes it possible to find relationships between candidate skills and job requirements.
-
+These relationships help the application identify suitable jobs based on the skills associated with a candidate.
 🔄 Application Workflow
-
-The application works approximately as follows:
-
-1. User opens the application
-          ↓
-2. Candidate is selected
-          ↓
-3. Frontend sends request to backend
-          ↓
-4. Express receives the request
-          ↓
-5. Backend communicates with Neo4j
-          ↓
-6. Neo4j retrieves relevant job information
-          ↓
-7. Backend sends job recommendations
-          ↓
-8. Frontend displays recommended jobs
-```
-
-🖥️ Running the Frontend
-
-The frontend is served directly by the Express server from the public folder.
-
-The application uses:
-
-app.use(express.static(path.join(__dirname, "public")));
-
-Therefore, the recommended way to access the application is:
-
+The application works through the following steps:
+User
+  │
+  ↓
+Open Job Recommendation App
+  │
+  ↓
+Select Candidate
+  │
+  ↓
+Click "Find Jobs"
+  │
+  ↓
+Frontend Sends HTTP Request
+  │
+  ↓
+Node.js + Express.js Backend
+  │
+  ↓
+Neo4j Database
+  │
+  ↓
+Find Matching Skills
+  │
+  ↓
+Retrieve Suitable Jobs
+  │
+  ↓
+Backend Sends Response
+  │
+  ↓
+Frontend Displays Job Recommendations
+🔌 API Endpoints
+The backend provides REST API endpoints for communicating with the application.
+🧪 Test API
+Method
+GET
+Endpoint
+/api/test
+URL
+http://localhost:3000/api/test
+This endpoint is used to check whether the backend server is running correctly.
+💼 Job Recommendations API
+Method
+GET
+Endpoint
+/api/recommendations
+URL
+http://localhost:3000/api/recommendations
+This endpoint retrieves suitable job recommendations from the backend and Neo4j database.
+▶️ Running the Application
+1. Open the Project
+Open the project folder in Visual Studio Code.
+2. Open the Terminal
+Open:
+Terminal → New Terminal
+3. Install Dependencies
+Run:
+npm install
+4. Configure .env
+Create the .env file in the project root directory and add your Neo4j credentials:
+NEO4J_URI=your_neo4j_uri
+NEO4J_USERNAME=your_neo4j_username
+NEO4J_PASSWORD=your_neo4j_password
+5. Start the Server
+Run:
+node server.js
+If the server starts successfully, the terminal should show something similar to:
+Job Recommendation App running at http://localhost:3000
+6. Open the Application
+Open your browser and enter:
 http://localhost:3000/
-
-You do not need to use VS Code's Go Live option when running the complete application through Express.
-
+The Job Recommendation App will open.
+7. Select a Candidate
+Select a candidate from the candidate selection option.
+8. Find Recommended Jobs
+Click the Find Jobs button.
+The application follows this process:
+Frontend
+    ↓
+HTTP Request
+    ↓
+Node.js + Express.js
+    ↓
+Neo4j Database
+    ↓
+Matching Jobs
+    ↓
+Frontend
+    ↓
+Recommended Jobs Displayed
+🌐 Frontend and Backend Integration
+The frontend is developed using:
+HTML
+CSS
+JavaScript
+The backend is developed using:
+Node.js
+Express.js
+The database is:
+Neo4j
+The frontend sends HTTP requests to the Express.js backend.
+The backend processes the request, communicates with Neo4j, retrieves the required job information, and sends the response back to the frontend.
+The Express server serves the frontend files from the public folder.
+The application can be accessed using:
+http://localhost:3000/
+🧪 Testing
+The application can be tested using a web browser or Postman.
+Main Application
+http://localhost:3000/
+Test API
+http://localhost:3000/api/test
+Job Recommendation API
+http://localhost:3000/api/recommendations
 📱 Accessing the Application on Mobile
-
-The application can also be accessed from a mobile device during development.
-
+The application can be accessed from a mobile phone during development.
 Make sure:
-
-Your computer and mobile phone are connected to the same Wi-Fi network.
-
-The Express server is running.
-
-The server listens on 0.0.0.0.
-
-Example:
-
+The computer and mobile phone are connected to the same Wi-Fi network.
+The Node.js server is running.
+The server accepts connections from the local network.
+The server can be configured as:
 app.listen(PORT, "0.0.0.0", () => {
-
     console.log(`Job Recommendation App running at http://localhost:${PORT}`);
-    
 });
-Find your computer's local IPv4 address using:
-
+Find your computer's IPv4 address using:
 ipconfig
-
-Then open the following on your phone:
-
-http://YOUR_COMPUTER_IP:3000/
-
-🔒 Security
-
-Sensitive information should never be committed to GitHub.
-
-The .gitignore file should contain:
-
+Look for:
+IPv4 Address
+For example:
+IPv4 Address: 192.168.1.5
+Then open the following URL on your mobile phone:
+http://192.168.1.5:3000/
+Replace 192.168.1.5 with your computer's actual IPv4 address.
+⚠️ Do not use localhost on your mobile phone. localhost refers to the mobile device itself.
+🛑 Stopping the Server
+To stop the Node.js server, press:
+Ctrl + C
+in the terminal.
+🔄 Starting the Application Again
+Whenever you want to run the project again:
+npm install
+Then start the server:
+node server.js
+Open the application:
+http://localhost:3000/
+🧪 Complete Running Process
+Open Project in VS Code
+        ↓
+Open Terminal
+        ↓
+npm install
+        ↓
+Configure .env
+        ↓
+node server.js
+        ↓
+Server Starts
+        ↓
+Open Browser
+        ↓
+http://localhost:3000/
+        ↓
+Select Candidate
+        ↓
+Click "Find Jobs"
+        ↓
+Backend Receives Request
+        ↓
+Neo4j Database
+        ↓
+Retrieve Matching Jobs
+        ↓
+Display Job Recommendations
+🔐 Security
+Security is important when working with database credentials.
+Never upload sensitive information to GitHub.
+Do not upload:
+Neo4j password
+Database credentials
+API keys
+Secret keys
+Private configuration files
+Make sure .gitignore contains:
 node_modules/
-
 .env
-A .env.example file can be provided for other developers:
-
+Use .env.example to show the required environment variables without revealing their actual values.
+Example:
 NEO4J_URI=
 NEO4J_USERNAME=
 NEO4J_PASSWORD=
-
 🚀 Future Enhancements
-
-The project can be further improved by adding:
-
-🔎 Job search and filtering
-
+The project can be improved by adding:
+🔎 Job search functionality
+🎯 Skill-based job matching
+📊 Job matching percentage
 📍 Location-based job recommendations
-
-🎯 Skill-based matching percentage
-
 👤 User registration and login
-
 📄 Resume upload
-
 🤖 Machine learning-based recommendations
-
+⭐ Save or bookmark jobs
+📧 Job notification system
+🏢 Company information
+💼 Detailed job description pages
+📱 Improved mobile responsiveness
+📈 Candidate dashboard
+🔐 User authentication and authorization
 🎓 Learning Outcomes
-
-Through this project, the following skills were developed:
-
-HTML webpage development
-
-CSS styling and responsive design
-
-JavaScript programming
-
-DOM manipulation
-
-REST API integration
-
-Node.js development
-
-Express.js backend development
-
-Neo4j database integration
-
-Environment variable management
-
-Frontend-backend communication
-
-Git and GitHub usage
-
-Debugging and testing web applications
-
-👩‍💻 Author
-
-Kavya Sandhu
-
-B.Tech Graduate | Fresher
-
-Skills
-
-HTML
-
-CSS
-
+Through this project, I developed practical knowledge of:
+HTML5
+CSS3
 JavaScript
-
+DOM Manipulation
+Node.js
+Express.js
+REST APIs
+Neo4j
+Graph Databases
+Database Connectivity
+Frontend-Backend Integration
+JSON
+CORS
+Environment Variables
+Git
+GitHub
+Debugging
+Full-Stack Web Development
+💡 Advantages
+The Job Recommendation App provides the following advantages:
+Simplifies the job search process.
+Provides candidate-based job recommendations.
+Uses Neo4j to manage relationships between candidates, skills, jobs, and companies.
+Provides a simple and user-friendly interface.
+Demonstrates frontend and backend integration.
+Can be extended with machine learning algorithms.
+Can support multiple candidates and job opportunities.
+Provides a foundation for developing a larger recruitment platform.
+🎯 Applications
+The Job Recommendation App can be useful in:
+💼 Job portals
+🏢 Recruitment websites
+🎓 College placement systems
+👨‍💼 HR management systems
+📚 Career guidance platforms
+🛠️ Skill-based recruitment platforms
+👥 Employee recruitment systems
+🧑‍💻 Skills Demonstrated
+HTML
+CSS
+JavaScript
+Node.js
+Express.js
+Neo4j
+REST API
+Graph Database
+Git
+GitHub
+Database Integration
+Frontend Development
+Backend Development
+Full-Stack Development
+📸 Application
+The application provides a simple interface for finding suitable jobs.
+Users can:
+Open the Job Recommendation App.
+Select a candidate.
+Click the Find Jobs button.
+Send a request to the backend.
+Retrieve suitable job recommendations.
+View the recommended jobs.
+The application connects the frontend, backend, and Neo4j database to provide job recommendation results.
+🏆 Project Highlights
+💼 Full-stack Job Recommendation Application
+🌐 Interactive web interface
+🔗 Frontend and backend integration
+🔌 REST API implementation
+🗄️ Neo4j graph database integration
+👤 Candidate-based job recommendations
+🛠️ Skill-based job matching
+🔐 Environment variable configuration
+📱 Mobile access support
+🧪 API testing
+🔧 Git and GitHub version control
+👩‍💻 Author
+Kavya
+B.Tech Graduate | Fresher
+Technical Skills
+HTML
+CSS
+JavaScript
 React.js
 Node.js
 Express.js
 Java
 Neo4j
-Git & GitHub
+Git
+GitHub
+📜 License
+This project is developed for educational, learning, and portfolio purposes.
+⭐ Acknowledgement
+This project was developed as a practical full-stack web development project to gain hands-on experience with frontend development, backend development, REST APIs, database integration, Neo4j, and GitHub.
