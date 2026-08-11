@@ -135,6 +135,9 @@ Sensitive database information is stored using environment variables instead of 
                  │ Job Recommended │
                  │     Results     │
                  └─────────────────┘
+```
+
+---
 📂 Project Structure
 job-recommendation-app/
 │
