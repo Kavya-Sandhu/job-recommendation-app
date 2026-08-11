@@ -75,76 +75,178 @@ Job
    └── POSTED_BY ──> Company
 ```
 
-###📂 Project Structure
+# 📂 Project Structure
 
 ```text
 job-recommendation-app/
 │
 ├── public/
-|
 │   ├── index.html
-|
 │   ├── style.css
-|
 │   └── script.js
 │
 ├── server.js
-|
 ├── package.json
-|
 ├── package-lock.json
-|
-├── .env
-|
+├── .env.example
 ├── .gitignore
-|
 └── README.md
+
 ```
 
-public/index.html
+# 📄 Project Files
+
+## `public/index.html`
 
 Contains the structure of the Job Recommendation application's user interface.
 
-public/style.css
+It includes:
 
-Contains the styling and layout of the application.
+- Application title
+- Candidate selection
+- Find Jobs button
+- Job recommendation display area
 
-public/script.js
+---
 
-Contains the frontend JavaScript logic and communication with the backend API.
+## `public/style.css`
 
-server.js
+Contains the styling and layout of the web application.
 
-Contains the Node.js/Express backend server, API routes, Neo4j database connection, and static file configuration.
+It is responsible for:
 
-.env
+- Page layout
+- Colors
+- Fonts
+- Buttons
+- Forms
+- Job recommendation cards
+- Responsive design
 
-Stores environment variables such as database credentials.
+---
 
-⚙️ Installation and Setup
+## `public/script.js`
 
-1. Clone the Repository
- 
-git clone YOUR_GITHUB_REPOSITORY_URL
+Contains the frontend JavaScript functionality.
 
-2. Move into the project directory:
-   
-cd job-recommendation-app
+It is responsible for:
 
-3. Install Dependencies
+- Handling user interactions
+- Reading the selected candidate
+- Sending requests to the backend
+- Receiving API responses
+- Displaying recommended jobs on the webpage
 
-Run:
+---
 
+## `server.js`
+
+Contains the backend implementation using Node.js and Express.js.
+
+It is responsible for:
+
+- Starting the web server
+- Serving frontend files
+- Creating REST API endpoints
+- Connecting to Neo4j
+- Processing requests
+- Sending responses to the frontend
+- Managing environment variables
+
+---
+
+## `package.json`
+
+Contains the project information, scripts, and required dependencies used by the application.
+
+The dependencies may include:
+
+- Express.js
+- Neo4j driver
+- dotenv
+- CORS
+
+Install all dependencies using:
+
+```bash
 npm install
 
-This installs the required Node.js packages.
+# ⚙️ Installation and Setup
 
-▶️ Running the Application
+Follow these steps to run the Job Recommendation App on your local computer.
 
-Start the backend server using:
+## 1. Clone the Repository
+
+Clone the GitHub repository using:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+
+# 📦 Install Dependencies
+
+Install all the required Node.js packages using:
+
+```bash
+npm install
+
+# 🔐 Configure Environment Variables
+
+Create a `.env` file in the root directory of the project.
+
+Add your Neo4j database details:
+
+```env
+NEO4J_URI=your_neo4j_uri
+NEO4J_USERNAME=your_neo4j_username
+NEO4J_PASSWORD=your_neo4j_password
+
+# 🗄️ Neo4j Database
+
+This project uses **Neo4j** as a graph database to store and manage relationships between candidates, skills, jobs, and companies.
+
+Neo4j is suitable for this project because job recommendations depend on relationships between a candidate's skills and the skills required for different jobs.
+
+## 📊 Database Entities
+
+The main entities used in the application are:
+
+- 👤 Candidate
+- 🛠️ Skill
+- 💼 Job
+- 🏢 Company
+
+## 🔗 Database Relationships
+
+The relationships between the entities can be represented as:
+
+```text
+Candidate
+    │
+    │ HAS_SKILL
+    ↓
+  Skill
+    │
+    │ REQUIRED_FOR
+    ↓
+   Job
+    │
+    │ OFFERED_BY
+    ↓
+ Company
+
+# ▶️ Running the Application
+
+Follow the steps below to run the Job Recommendation App on your local computer.
+
+## 1. Start the Backend Server
+
+Open the project folder in **Visual Studio Code**.
+
+Open the terminal and run:
+
+```bash
 
 node server.js
-
 You should see:
 
 Job Recommendation App running at http://localhost:3000
