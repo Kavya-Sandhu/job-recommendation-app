@@ -412,6 +412,7 @@ http://localhost:3000/api/test
 This endpoint is used to check whether the backend server is running correctly.
 
 # 💼 Job Recommendations API
+
 Method
 
 GET
@@ -536,7 +537,7 @@ The application can be tested using a web browser or Postman.
 
 Main Application
 
-http://localhost:3000/
+http://localhost:3000/public/index.html
 
 Test API
 
