@@ -165,6 +165,8 @@ The dependencies may include:
 - Neo4j driver
 - dotenv
 - CORS
+  
+---
 
 Install all dependencies using:
 
