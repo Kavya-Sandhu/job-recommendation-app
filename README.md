@@ -76,19 +76,29 @@ Job
 ```
 
 📂 Project Structure
+
 job-recommendation-app/
 │
 ├── public/
+|
 │   ├── index.html
+|
 │   ├── style.css
+|
 │   └── script.js
 │
 ├── server.js
+|
 ├── package.json
+|
 ├── package-lock.json
+|
 ├── .env
+|
 ├── .gitignore
+|
 └── README.md
+
 public/index.html
 Contains the structure of the Job Recommendation application's user interface.
 public/style.css
