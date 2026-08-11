@@ -527,7 +527,7 @@ The Express server serves the frontend files from the public folder.
 
 The application can be accessed using:
 
-http://localhost:3000/public/index.html
+http://localhost:3000
 
 ---
 
@@ -537,7 +537,7 @@ The application can be tested using a web browser or Postman.
 
 Main Application
 
-http://localhost:3000/public/index.html
+http://localhost:3000
 
 Test API
 
