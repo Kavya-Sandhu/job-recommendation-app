@@ -170,7 +170,6 @@ The dependencies may include:
 
 Install all dependencies using:
 
-```bash
 npm install
 
 # ⚙️ Installation and Setup
