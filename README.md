@@ -100,24 +100,37 @@ job-recommendation-app/
 └── README.md
 
 public/index.html
+
 Contains the structure of the Job Recommendation application's user interface.
+
 public/style.css
+
 Contains the styling and layout of the application.
+
 public/script.js
+
 Contains the frontend JavaScript logic and communication with the backend API.
+
 server.js
+
 Contains the Node.js/Express backend server, API routes, Neo4j database connection, and static file configuration.
+
 .env
+
 Stores environment variables such as database credentials.
 
 ⚙️ Installation and Setup
+
 1. Clone the Repository
+ 
 git clone YOUR_GITHUB_REPOSITORY_URL
-Move into the project directory:
+2. Move into the project directory:
 cd job-recommendation-app
-2. Install Dependencies
+
+3. Install Dependencies
 Run:
 npm install
+
 This installs the required Node.js packages.
 
 ▶️ Running the Application
