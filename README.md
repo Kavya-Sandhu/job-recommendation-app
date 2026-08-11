@@ -242,8 +242,11 @@ Contains the project information, scripts, and required dependencies used by the
 The project uses packages such as:
 
 Express.js
+
 Neo4j Driver
+
 dotenv
+
 CORS
 
 ---
@@ -261,9 +264,13 @@ This file helps maintain consistent package versions when installing the project
 .env.example
 
 Contains the names of the environment variables required by the application without exposing actual credentials.
+
 Example:
+
 NEO4J_URI=
+
 NEO4J_USERNAME=
+
 NEO4J_PASSWORD=
 
 ---
@@ -296,7 +303,9 @@ Create a .env file in the root directory of the project.
 Add your Neo4j database details:
 
 NEO4J_URI=your_neo4j_uri
+
 NEO4J_USERNAME=your_neo4j_username
+
 NEO4J_PASSWORD=your_neo4j_password
 
 Replace the values with your actual Neo4j database credentials.
@@ -322,7 +331,9 @@ The main entities are:
 ---
 
 ## 🔗 Database Relationships
+
 ```text
+
 Candidate
     │
     │ HAS_SKILL
@@ -346,6 +357,7 @@ These relationships help the application identify suitable jobs based on the ski
 ## 🔄 Application Workflow
 
 The application works through the following steps:
+
 ```text
 User
   │
@@ -381,24 +393,35 @@ Frontend Displays Job Recommendations
 ```
 ---
 ## 🔌 API Endpoints
+
 The backend provides REST API endpoints for communicating with the application.
 
 # 🧪 Test API
 Method
+
 GET
+
 Endpoint
+
 /api/test
+
 URL
+
 http://localhost:3000/api/test
 
 This endpoint is used to check whether the backend server is running correctly.
 
 # 💼 Job Recommendations API
 Method
+
 GET
+
 Endpoint
+
 /api/recommendations
+
 URL
+
 http://localhost:3000/api/recommendations
 
 This endpoint retrieves suitable job recommendations from the backend and Neo4j database.
@@ -412,35 +435,47 @@ Open the project folder in Visual Studio Code.
 
 2. Open the Terminal
 Open:
+
 Terminal → New Terminal
 
-3. Install Dependencies
+4. Install Dependencies
 Run:
+
 npm install
 
-4. Configure .env
+5. Configure .env
+   
 Create the .env file in the project root directory and add your Neo4j credentials:
+
 NEO4J_URI=your_neo4j_uri
+
 NEO4J_USERNAME=your_neo4j_username
+
 NEO4J_PASSWORD=your_neo4j_password
 
 5. Start the Server
 Run:
+
 node server.js
+
 If the server starts successfully, the terminal should show something similar to:
+
 Job Recommendation App running at http://localhost:3000/public/index.html
 
 6. Open the Application
    
 Open your browser and enter:
+
 http://localhost:3000/public/index.html
 
 The Job Recommendation App will open.
 
 7. Select a Candidate
+   
 Select a candidate from the candidate selection option.
 
 8. Find Recommended Jobs
+   
 Click the Find Jobs button.
 
 The application follows this process:
@@ -476,14 +511,21 @@ JavaScript
 The backend is developed using:
 
 Node.js
+
 Express.js
+
 The database is:
+
 Neo4j
 
 The frontend sends HTTP requests to the Express.js backend.
+
 The backend processes the request, communicates with Neo4j, retrieves the required job information, and sends the response back to the frontend.
+
 The Express server serves the frontend files from the public folder.
+
 The application can be accessed using:
+
 http://localhost:3000/public/index.html
 
 ---
@@ -491,57 +533,53 @@ http://localhost:3000/public/index.html
 ## 🧪 Testing
 
 The application can be tested using a web browser or Postman.
+
 Main Application
+
 http://localhost:3000/
+
 Test API
+
 http://localhost:3000/api/test
+
 Job Recommendation API
+
 http://localhost:3000/api/recommendations
 
 ---
 
-## 📱 Accessing the Application on Mobile
-The application can be accessed from a mobile phone during development.
-Make sure:
-The computer and mobile phone are connected to the same Wi-Fi network.
-The Node.js server is running.
-The server accepts connections from the local network.
-The server can be configured as:
-app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Job Recommendation App running at http://localhost:${PORT}`);
-});
-Find your computer's IPv4 address using:
-ipconfig
-Look for:
-IPv4 Address
-For example:
-IPv4 Address: 192.168.1.5
-Then open the following URL on your mobile phone:
-http://192.168.1.5:3000/
-Replace 192.168.1.5 with your computer's actual IPv4 address.
-⚠️ Do not use localhost on your mobile phone. localhost refers to the mobile device itself.
-🛑 Stopping the Server
-To stop the Node.js server, press:
-Ctrl + C
-in the terminal.
-
 ## 🔐 Security
 
 Security is important when working with database credentials.
+
 Never upload sensitive information to GitHub.
+
 Do not upload:
+
 Neo4j password
+
 Database credentials
+
 API keys
+
 Secret keys
+
 Private configuration files
+
 Make sure .gitignore contains:
+
 node_modules/
+
 .env
+
 Use .env.example to show the required environment variables without revealing their actual values.
+
 Example:
+
 NEO4J_URI=
+
 NEO4J_USERNAME=
+
 NEO4J_PASSWORD=
 
 ---
@@ -549,95 +587,127 @@ NEO4J_PASSWORD=
 ## 🚀 Future Enhancements
 
 The project can be improved by adding:
+
 🔎 Job search functionality
+
 🎯 Skill-based job matching
+
 📊 Job matching percentage
+
 📍 Location-based job recommendations
+
 👤 User registration and login
+
 📄 Resume upload
 
 ---
 
-## 🎓 Learning Outcomes
-
-Through this project, I developed practical knowledge of:
-HTML5
-CSS3
-JavaScript
-DOM Manipulation
-Node.js
-Express.js
-REST APIs
-Neo4j
-Graph Databases
-Database Connectivity
-Frontend-Backend Integration
-JSON
-Environment Variables
-Git
-GitHub
-Debugging
-Full-Stack Web Development
-
----
 ## 💡 Advantages
+
 The Job Recommendation App provides the following advantages:
+
 Simplifies the job search process.
+
 Provides candidate-based job recommendations.
+
 Uses Neo4j to manage relationships between candidates, skills, jobs, and companies.
+
 Provides a simple and user-friendly interface.
+
 Demonstrates frontend and backend integration.
+
 Can be extended with machine learning algorithms.
+
 Can support multiple candidates and job opportunities.
+
 Provides a foundation for developing a larger recruitment platform.
 
 ---
 
 ## 🎯 Applications
+
 The Job Recommendation App can be useful in:
+
 💼 Job portals
+
 🏢 Recruitment websites
+
 🎓 College placement systems
+
 👨‍💼 HR management systems
+
 📚 Career guidance platforms
+
 🛠️ Skill-based recruitment platforms
+
 👥 Employee recruitment systems
-🧑‍💻 Skills Demonstrated
+
+---
+
+## 🧑‍💻 Skills Demonstrated
+
 HTML
+
 CSS
+
 JavaScript
+
 Node.js
+
 Express.js
+
 Neo4j
+
 REST API
+
 Graph Database
+
 Git
+
 GitHub
+
 Database Integration
+
 Frontend Development
+
 Backend Development
+
 Full-Stack Development
 
 ---
 
 ### 👩‍💻 Author
+
 ## Kavya Sandhu
+
 B.Tech Graduate | Fresher
+
 Technical Skills
+
 HTML
+
 CSS
+
 JavaScript
+
 React.js
+
 Node.js
+
 Express.js
+
 Java
+
 Neo4j
+
 Git
+
 GitHub
 
 ---
 
 ## 📜 License
+
 This project is developed for educational, learning, and portfolio purposes.
 
 ---
