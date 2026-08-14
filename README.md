@@ -776,12 +776,6 @@ GitHub
 
 ---
 
-## 📜 License
-
-This project is developed for educational, learning, and portfolio purposes.
-
----
-
 ## ⭐ Acknowledgement
 This project was developed as a practical full-stack web development project to gain hands-on experience with frontend development, backend development, REST APIs, database integration, Neo4j, and GitHub.
 
