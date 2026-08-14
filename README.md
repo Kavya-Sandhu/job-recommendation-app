@@ -20,7 +20,7 @@ This project demonstrates frontend development, backend development, REST API in
 
 ---
 
-# Use Case
+# 📌 Use Case
 
 The main use case is to help a job seeker find jobs that match their skills, education, experience, and interests.
 
@@ -41,6 +41,36 @@ It can also find indirect relationships such as:
 User → Skill → Job → Company → Location
 
 So instead of simply searching for the word "Java", the system can understand the relationships between the user, skills, jobs, companies, and locations.
+
+---
+# Why Graph Database
+
+A traditional relational database stores information mainly in tables.
+
+For this project, there are many relationships:
+
+User has Skill
+Job requires Skill
+Job belongs to Company
+Company located in City
+User interested in Job
+User has Experience
+
+A graph database represents these naturally as:
+Nodes
+User
+Skill
+Job
+Company
+Location
+
+Relationships:
+HAS_SKILL
+REQUIRES_SKILL
+WORKS_FOR
+LOCATED_IN
+APPLIED_FOR
+This makes it easier to discover connections between different pieces of information.
 
 # 🎯 Project Objectives
 
