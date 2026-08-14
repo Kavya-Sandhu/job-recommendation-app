@@ -50,26 +50,43 @@ A traditional relational database stores information mainly in tables.
 For this project, there are many relationships:
 
 User has Skill
+
 Job requires Skill
+
 Job belongs to Company
+
 Company located in City
+
 User interested in Job
+
 User has Experience
 
 A graph database represents these naturally as:
+
 Nodes
+
 User
+
 Skill
+
 Job
+
 Company
+
 Location
 
 Relationships:
+
 HAS_SKILL
+
 REQUIRES_SKILL
+
 WORKS_FOR
+
 LOCATED_IN
+
 APPLIED_FOR
+
 This makes it easier to discover connections between different pieces of information.
 
 # 🎯 Project Objectives
