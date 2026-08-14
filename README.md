@@ -592,6 +592,8 @@ http://localhost:3000
 
 ## Home page
 
+![Screenshhot] https://github.com/Kavya-Sandhu/job-recommendation-app/blob/main/Screenshot%202026-08-14%20161031.png
+
 ![Screenshhot] 
 
 
