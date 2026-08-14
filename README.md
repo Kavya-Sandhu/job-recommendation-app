@@ -20,6 +20,28 @@ This project demonstrates frontend development, backend development, REST API in
 
 ---
 
+# Use Case
+
+The main use case is to help a job seeker find jobs that match their skills, education, experience, and interests.
+
+For example:
+
+User → Skills → Jobs
+
+A user has:
+Java
+SQL
+React
+1 year experience
+
+The system can identify jobs requiring those skills and recommend the most relevant ones.
+
+It can also find indirect relationships such as:
+
+User → Skill → Job → Company → Location
+
+So instead of simply searching for the word "Java", the system can understand the relationships between the user, skills, jobs, companies, and locations.
+
 # 🎯 Project Objectives
 
 The main objectives of this project are:
