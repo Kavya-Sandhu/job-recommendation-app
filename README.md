@@ -385,20 +385,6 @@ Neo4j is useful for this project because job recommendations depend on relations
 
 ---
 
-## 📊 Database Entities
-
-The main entities are:
-
-👤 Candidate
-
-🛠️ Skill
-
-💼 Job
-
-🏢 Company
-
----
-
 ## 🔗 Database Relationships
 
 ```text
@@ -568,6 +554,8 @@ Recommended Jobs Displayed
 ```
 ---
 
+
+
 ## 🌐 Frontend and Backend Integration
 
 The frontend is developed using:
@@ -600,59 +588,12 @@ http://localhost:3000
 
 ---
 
-## 🧪 Testing
+# 💻 Output Images
 
-The application can be tested using a web browser or Postman.
+## Home page
 
-Main Application
+![Screenshhot] 
 
-http://localhost:3000
-
-Test API
-
-http://localhost:3000/api/test
-
-Job Recommendation API
-
-http://localhost:3000/api/recommendations
-
----
-
-## 🔐 Security
-
-Security is important when working with database credentials.
-
-Never upload sensitive information to GitHub.
-
-Do not upload:
-
-Neo4j password
-
-Database credentials
-
-API keys
-
-Secret keys
-
-Private configuration files
-
-Make sure .gitignore contains:
-
-node_modules/
-
-.env
-
-Use .env.example to show the required environment variables without revealing their actual values.
-
-Example:
-
-NEO4J_URI=
-
-NEO4J_USERNAME=
-
-NEO4J_PASSWORD=
-
----
 
 ## 🚀 Future Enhancements
 
