@@ -592,9 +592,23 @@ http://localhost:3000
 
 ## Home page
 
-![Screenshhot] https://github.com/Kavya-Sandhu/job-recommendation-app/blob/main/Screenshot%202026-08-14%20161031.png
+![Screenshot] https://github.com/Kavya-Sandhu/job-recommendation-app/blob/main/Screenshot%202026-08-14%20161031.png
 
-![Screenshhot] 
+![Screenshot] https://github.com/Kavya-Sandhu/job-recommendation-app/blob/main/Screenshot%202026-08-14%20161124.png
+
+![Screenshot] https://github.com/Kavya-Sandhu/job-recommendation-app/blob/main/Screenshot%202026-08-14%20161145.png
+
+![Screenshot] https://github.com/Kavya-Sandhu/job-recommendation-app/blob/main/Screenshot%202026-08-14%20161135.png
+
+![Screenshot] https://github.com/Kavya-Sandhu/job-recommendation-app/blob/main/Screenshot%202026-08-14%20161206.png
+
+![Screenshot] https://github.com/Kavya-Sandhu/job-recommendation-app/blob/main/Screenshot%202026-08-14%20161218.png
+
+![Screenshot] https://github.com/Kavya-Sandhu/job-recommendation-app/blob/main/Screenshot%202026-08-14%20161231.png
+
+![Screenshot] https://github.com/Kavya-Sandhu/job-recommendation-app/blob/main/Screenshot%202026-08-14%20161250.png
+
+
 
 
 ## 🚀 Future Enhancements
